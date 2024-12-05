@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+/* Container styling */
+#container {
+    width: 85%;
+    margin: 20px auto;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Search Bar */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    width: 50vw;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #007acc;
+    box-shadow: 0 0 5px #007acc;
+}
+
+/* Map and legend container */
+.map-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+/* Styling for the map */
+#map {
+    width: 75%;
+    height: 70vh;
+    border: 2px solid #444;
+    border-radius: 10px;
+}
+
+/* Layer Control */
+#layer-control {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    margin-left: 10px;
+    height: 50vh;
+    overflow: auto ;
+}
+
+/* Legend Image Styling */
+.map-container img {
+    margin-top: 10px;
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    border: #444;
+}
+
+/* Popup styling */
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 280px;
+}
+
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-top-color: #ccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+/* Close button for popup */
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    font-size: 18px;
+}
+
+.ol-popup-closer:after {
+    content: "✖";
+}
+
+.data-row{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value{
+    color: #555;
+}
+
+.link a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #007acc;
+    border-radius: 30%;
+    padding: 2px;
+    margin-top: 10px;
+}
+
+.link a:hover {
+    color:#007acc ;
+    background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #map {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #layer-control {
+        width: 100%;
+        text-align: center;
+    }
+}
